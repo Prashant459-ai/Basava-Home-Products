@@ -1001,6 +1001,8 @@
             .about-content { padding: 2rem; }
             .products-grid { grid-template-columns: 1fr; }
             .contact-content { grid-template-columns: 1fr; }
+            /* FIX: Reduce horizontal padding on the outer contact section for mobile */
+            .contact { padding: 80px 20px; } 
         }
 
         /* Smooth Scroll */
@@ -1010,7 +1012,6 @@
     </style>
 </head>
 <body>
-    <!-- Loading Screen -->
     <div class="loader" id="loader">
         <div class="loader-content">
             <div class="spinner"></div>
@@ -1018,10 +1019,8 @@
         </div>
     </div>
 
-    <!-- Floating Particles -->
     <div class="particles" id="particles"></div>
 
-    <!-- Header -->
     <header id="header">
         <div class="container">
             <nav>
@@ -1036,13 +1035,10 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
-        <!-- Background Video - Replace src with your video URL -->
         <video class="hero-video" autoplay muted loop playsinline>
             <source src="YOUR_VIDEO_URL.mp4" type="video/mp4">
-            <!-- Fallback for browsers that don't support video -->
-        </video>
+            </video>
         <div class="hero-content">
             <h1>Premium Natural Oils & Products</h1>
             <p class="hero-subtitle">Pure • Organic • Traditional</p>
@@ -1054,7 +1050,6 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
     <section class="stats">
         <div class="container">
             <div class="stats-grid">
@@ -1070,15 +1065,10 @@
                     <div class="stat-number" data-target="10">0</div>
                     <div class="stat-label">+ Years Experience</div>
                 </div>
-                <!-- <div class="stat-card scroll-reveal">
-                    <div class="stat-number" data-target="24">0</div>
-                    <div class="stat-label">/7 Support</div>
-                </div> -->
-            </div>
+                </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title scroll-reveal">About Us</h2>
@@ -1089,7 +1079,6 @@
         </div>
     </section>
 
-    <!-- Products Section -->
     <section id="products" class="products">
         <div class="container">
             <h2 class="section-title scroll-reveal">Our Premium Products</h2>
@@ -1102,11 +1091,9 @@
             </div>
 
             <div class="products-grid">
-                <!-- Product 1 -->
                 <div class="product-card scroll-reveal" data-category="powder">
                     <span class="product-badge">NEW</span>
                     <div class="product-image">
-                        <!-- Replace src with your product image URL -->
                         <img src="coconut powder.png" alt="Coconut Powder">
                         <span class="product-placeholder">🥥</span>
                     </div>
@@ -1121,11 +1108,9 @@
                     </div>
                 </div>
 
-                <!-- Product 2 -->
                 <div class="product-card scroll-reveal" data-category="oils">
                     <span class="product-badge">POPULAR</span>
                     <div class="product-image">
-                        <!-- Replace src with your product image URL -->
                         <img src="oil1.jpg" alt="Coconut Oil">
                         <span class="product-placeholder">🥥</span>
                     </div>
@@ -1140,10 +1125,8 @@
                     </div>
                 </div>
 
-                <!-- Product 3 -->
                 <div class="product-card scroll-reveal" data-category="oils">
                     <div class="product-image">
-                        <!-- Replace src with your product image URL -->
                         <img src="sunflower oil.png" alt="Sunflower Oil">
                         <span class="product-placeholder">🌻</span>
                     </div>
@@ -1158,10 +1141,8 @@
                     </div>
                 </div>
 
-                <!-- Product 4 -->
                 <div class="product-card scroll-reveal" data-category="oils">
                     <div class="product-image">
-                        <!-- Replace src with your product image URL -->
                         <img src="sesame oli.png" alt="Sesame Oil">
                         <span class="product-placeholder">🫘</span>
                     </div>
@@ -1176,10 +1157,8 @@
                     </div>
                 </div>
 
-                <!-- Product 5 -->
                 <div class="product-card scroll-reveal" data-category="oils">
                     <div class="product-image">
-                        <!-- Replace src with your product image URL -->
                         <img src="safflower oil.png" alt="Safflower Oil">
                         <span class="product-placeholder">🌾</span>
                     </div>
@@ -1197,7 +1176,6 @@
         </div>
     </section>
 
-    <!-- Modal -->
     <div class="modal" id="productModal">
         <div class="modal-content">
             <span class="modal-close" onclick="closeModal()">×</span>
@@ -1207,13 +1185,11 @@
         </div>
     </div>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title scroll-reveal" style="color: white;">Get In Touch</h2>
             <p class="section-subtitle scroll-reveal" style="color: rgba(255,255,255,0.9);">We'd love to hear from you. Reach out for any queries or orders.</p>
             <div class="contact-content">
-                <!-- Contact Information -->
                 <div class="contact-info scroll-reveal">
                     <h3>Contact Details</h3>
                     <div class="contact-item">
@@ -1246,7 +1222,6 @@
                     </div>
                 </div>
 
-                <!-- Contact Form -->
                 <div class="contact-form scroll-reveal">
                     <h3>Send Us a Message</h3>
                     <form id="contactForm">
@@ -1273,7 +1248,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -1314,7 +1288,6 @@
         </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
     <div class="scroll-top" id="scrollTop">↑</div>
 
     <script>
