@@ -186,7 +186,7 @@
             text-align: center;
             padding: 150px 40px 100px;
             position: relative;
-            overflow: hidden;
+            overflow: hidden; 
         }
 
         .hero-video {
@@ -195,8 +195,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            /* MODIFIED: 'contain' ensures the entire video frame is visible (no cropping) */
+            object-fit: contain; 
             z-index: 0;
+            /* TRANSFORM RESET: Removed scale/translate to show the full, uncropped frame */
+            transform: none; 
+            transition: transform 0.3s ease-out;
         }
 
         .hero::before {
@@ -1037,7 +1041,7 @@
 
     <section id="home" class="hero">
         <video class="hero-video" autoplay muted loop playsinline>
-            <source src="YOUR_VIDEO_URL.mp4" type="video/mp4">
+            <source src="video.mp4" type="video/mp4">
             </video>
         <div class="hero-content">
             <h1>Premium Natural Oils & Products</h1>
@@ -1102,7 +1106,7 @@
                         <p class="product-kannada">ತೆಂಗಿನ ಪುಡಿ</p>
                         <p>Pure and natural coconut powder made from premium quality coconuts. Perfect for cooking, baking, and adding rich flavor to your dishes.</p>
                         <div class="product-actions">
-                            <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I'm%20interested%20in%20Coconut%20Powder" class="whatsapp-btn"><span>📱 WhatsApp</span></a>
+                            <a href="https://wa.me/916366283489?text=Hi!%20I'm%20interested%20in%20Coconut%20Powder" class="whatsapp-btn"><span>📱 WhatsApp</span></a>
                             <button class="view-details-btn" onclick="openModal('Coconut Powder', 'ತೆಂಗಿನ ಪುಡಿ', 'Pure and natural coconut powder made from premium quality coconuts. Ideal for traditional recipes, desserts, and health drinks. Rich in fiber and nutrients.')">Details</button>
                         </div>
                     </div>
@@ -1119,7 +1123,7 @@
                         <p class="product-kannada">ತೆಂಗಿನ ಎಣ್ಣೆ</p>
                         <p>100% pure cold-pressed coconut oil. Rich in nutrients, ideal for cooking, hair care, and skin care. Traditionally extracted for maximum benefits.</p>
                         <div class="product-actions">
-                            <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I'm%20interested%20in%20Coconut%20Oil" class="whatsapp-btn"><span>📱 WhatsApp</span></a>
+                            <a href="https://wa.me/916366283489?text=Hi!%20I'm%20interested%20in%20Coconut%20Oil" class="whatsapp-btn"><span>📱 WhatsApp</span></a>
                             <button class="view-details-btn" onclick="openModal('Coconut Oil', 'ತೆಂಗಿನ ಎಣ್ಣೆ', '100% pure cold-pressed coconut oil extracted using traditional methods. Perfect for cooking, hair care, and skincare. Rich in MCT and natural antioxidants.')">Details</button>
                         </div>
                     </div>
@@ -1135,7 +1139,7 @@
                         <p class="product-kannada">ಸೂರ್ಯಕಾಂತಿ ಎಣ್ಣೆ</p>
                         <p>Premium quality sunflower oil, light and healthy for everyday cooking. Rich in vitamins and perfect for all types of Indian cuisine.</p>
                         <div class="product-actions">
-                            <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I'm%20interested%20in%20Sunflower%20Oil" class="whatsapp-btn"><span>📱 WhatsApp</span></a>
+                            <a href="https://wa.me/916366283489?text=Hi!%20I'm%20interested%20in%20Sunflower%20Oil" class="whatsapp-btn"><span>📱 WhatsApp</span></a>
                             <button class="view-details-btn" onclick="openModal('Sunflower Oil', 'ಸೂರ್ಯಕಾಂತಿ ಎಣ್ಣೆ', 'Light and healthy sunflower oil rich in vitamin E and essential fatty acids. Perfect for daily cooking, frying, and salad dressings.')">Details</button>
                         </div>
                     </div>
@@ -1151,7 +1155,7 @@
                         <p class="product-kannada">ಎಳ್ಳು ಎಣ್ಣೆ</p>
                         <p>Pure sesame oil with authentic aroma and taste. Excellent for traditional cooking, massage therapy, and promoting overall health.</p>
                         <div class="product-actions">
-                            <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I'm%20interested%20in%20Sesame%20Oil" class="whatsapp-btn"><span>📱 WhatsApp</span></a>
+                            <a href="https://wa.me/916366283489?text=Hi!%20I'm%20interested%20in%20Sesame%20Oil" class="whatsapp-btn"><span>📱 WhatsApp</span></a>
                             <button class="view-details-btn" onclick="openModal('Sesame Oil', 'ಎಳ್ಳು ಎಣ್ಣೆ', 'Traditional sesame oil with rich aroma and authentic taste. Ideal for Indian cooking, oil pulling, and therapeutic massage. Rich in antioxidants.')">Details</button>
                         </div>
                     </div>
@@ -1167,7 +1171,7 @@
                         <p class="product-kannada">ಕುಸುಂಬೆ ಎಣ್ಣೆ</p>
                         <p>Heart-healthy safflower oil, perfect for light cooking and frying. Low in saturated fats and high in beneficial nutrients.</p>
                         <div class="product-actions">
-                            <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I'm%20interested%20in%20Safflower%20Oil" class="whatsapp-btn"><span>📱 WhatsApp</span></a>
+                            <a href="https://wa.me/916366283489?text=Hi!%20I'm%20interested%20in%20Safflower%20Oil" class="whatsapp-btn"><span>📱 WhatsApp</span></a>
                             <button class="view-details-btn" onclick="openModal('Safflower Oil', 'ಕುಸುಂಬೆ ಎಣ್ಣೆ', 'Heart-healthy safflower oil low in saturated fats. Perfect for health-conscious cooking, salad dressings, and light frying.')">Details</button>
                         </div>
                     </div>
@@ -1196,55 +1200,33 @@
                         <div class="contact-item-icon">📍</div>
                         <div class="contact-item-content">
                             <strong>Address</strong>
-                            <span>123 Main Street, Bangalore, Karnataka 560001</span>
+                            <span>Jalapura Camp,Sriwar</span>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-item-icon">📞</div>
                         <div class="contact-item-content">
                             <strong>Phone</strong>
-                            <span>+91 XXXXXXXXXX</span>
+                            <span>+91 6366283489</span>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-item-icon">📧</div>
                         <div class="contact-item-content">
                             <strong>Email</strong>
-                            <span>info@basavahomeproducts.com</span>
+                            <span>pk4404564@gmail.com</span>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-item-icon">💬</div>
                         <div class="contact-item-content">
                             <strong>WhatsApp</strong>
-                            <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I%20would%20like%20to%20know%20more%20about%20your%20products" style="color: #ffd700; text-decoration: none;">Chat with us now</a>
+                            <a href="https://wa.me/916366283489?text=Hi!%20I%20would%20like%20to%20know%20more%20about%20your%20products" style="color: #ffd700; text-decoration: none;">Chat with us now</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="contact-form scroll-reveal">
-                    <h3>Send Us a Message</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label>Your Name</label>
-                            <input type="text" required placeholder="Enter your name" name="name">
-                        </div>
-                        <div class="form-group">
-                            <label>Your Email</label>
-                            <input type="email" required placeholder="Enter your email" name="email">
-                        </div>
-                        <div class="form-group">
-                            <label>Your Phone</label>
-                            <input type="tel" placeholder="Enter your phone number" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label>Message</label>
-                            <textarea rows="5" required placeholder="Enter your message" name="message"></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
                 </div>
-            </div>
         </div>
     </section>
 
@@ -1277,10 +1259,11 @@
             </div>
             <div class="footer-section">
                 <h4>Contact Info</h4>
-                <p>📍 123 Main Street, Bangalore</p>
-                <p>📞 +91 XXXXXXXXXX</p>
-                <p>📧 info@basavahomeproducts.com</p>
-                <p>💬 WhatsApp: <a href="https://wa.me/91XXXXXXXXXX">Chat Now</a></p>
+                <p>📍 Jalapura Camp,Sriwar</p>
+                <p>📞 +91 8971976451</p>
+                <p>📞 +91 6366283489</p>
+                <p>📧 pk4404564@gmail.com.com</p>
+                <p>💬 WhatsApp: <a href="https://wa.me/916366283489">Chat Now</a></p>
             </div>
         </div>
         <div class="footer-bottom">
